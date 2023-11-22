@@ -7,7 +7,10 @@ from io import BytesIO
 import requests
 from PIL import Image, ImageEnhance
 
-client = discord.Client()
+intents = discord.Intents.default()
+intents.members = True
+
+client = discord.Client(intents=intents)
 google = GoogleImagesSearch('AIzaSyCMv6369X227JMBN6Traw3H9-PXQNKzkOA', 'c467ed045c57f4cd1')
 queue = []
 
@@ -98,4 +101,4 @@ async def send_dm(mem, string):
 async def on_reaction_add(reaction, user):
     print("whoops")
 
-client.run("ODk4NDA0MTEzNDIxODQwNDE1.YWjuCA.bFtPmTx3orSc-RgXBmNbTjBc5Go")
+client.run("ODk4NDA0MTEzNDIxODQwNDE1.G4eETe.JdjU5IruJU9jrQTdqowcBfuZOz0x0k6zRUqf0c")
